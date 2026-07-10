@@ -8,7 +8,7 @@ An AI-powered chatbot built using **LangGraph**, **LangChain**, **Groq LLM**, **
 
 - 💬 **Basic Chatbot** – General conversational AI powered by Groq LLM.
 - 🌐 **Chatbot with Web** – Performs real-time web search using Tavily when required.
-- 📰 **AI News** – Fetches and summarizes the latest AI news (Daily, Weekly, Monthly, Yearly) into Markdown reports.
+- 📰 **AI News** – Fetches and summarizes the latest AI news (Daily, Weekly, Monthly, Yearly).
 
 ---
 
@@ -30,7 +30,7 @@ Agentic-AI-Chatbot
 │── requirements.txt
 │── README.md
 │── src/
-│── AINews/
+
 ```
 
 ---

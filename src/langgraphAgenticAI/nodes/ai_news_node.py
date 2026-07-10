@@ -1,3 +1,4 @@
+
 from tavily import TavilyClient
 from langchain_core.prompts import ChatPromptTemplate
 
@@ -34,13 +35,13 @@ class AINewsNode:
             (
                 "system",
                 """
-Summarize AI news articles into markdown format.
+Summarize AI news articles.
 
 For each item include:
 - Date in **YYYY-MM-DD** format in IST timezone
 - Concise sentence summary from latest news
 - Sort news by date wise (latest first)
-- Source URL as link
+- The source URL as a clickable Markdown link
 
 Use format:
 
@@ -70,19 +71,11 @@ Use format:
 
         
         state['summary']=response.content
-        self.state['summary']=state['summary']
+
         return state
     
-    def save_result(self, state):
-        frequency = self.state['frequency']
-        summary = self.state['summary']
-        filename = f"./AINews/{frequency}_summary.md"
-        with open(filename, 'w') as f:
-            f.write(f"# {frequency.capitalize()} AI News Summary\n\n")
-            f.write(summary)
-        state["filename"] = filename
-        self.state['filename'] = filename
-        return state
+        
+        
 
             
 

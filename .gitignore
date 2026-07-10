@@ -8,9 +8,6 @@ __pycache__/
 
 .streamlit/secrets.toml
 
-AINews/
-AINews/*.md
-
 .vscode/
 
 .idea/

@@ -59,12 +59,12 @@ class GraphBuilder:
         ##added the nodes
         self.graph_builder.add_node("fetch_news",ai_news_node.fetch_news)
         self.graph_builder.add_node("summarize_news",ai_news_node.summarize_news)
-        self.graph_builder.add_node("save_result",ai_news_node.save_result)
+        
         ##added the edges
-        self.graph_builder.set_entry_point("fetch_news")
+        self.graph_builder.add_edge(START, "fetch_news")
         self.graph_builder.add_edge("fetch_news","summarize_news")
-        self.graph_builder.add_edge("summarize_news","save_result")
-        self.graph_builder.add_edge("save_result",END)
+        self.graph_builder.add_edge("summarize_news",END)
+        
 
 
     def setup_graph(self, usecase):

@@ -1,6 +1,5 @@
 import os
-
-from langchain_community.tools.tavily_search import TavilySearchResults
+from langchain_tavily import TavilySearch 
 from langgraph.prebuilt import ToolNode
 
 
@@ -13,7 +12,7 @@ def get_tools(tavily_api_key):
     os.environ["TAVILY_API_KEY"] = tavily_api_key
 
     tools = [
-        TavilySearchResults(max_results=2)
+        TavilySearch(max_results=2)
     ]
 
     return tools
